@@ -5,7 +5,8 @@ var bodyParser = require("body-parser");
 var handleBars = require("express-handlebars");
 var routes = require("./controllers/burgers_controllers.js");
 var app = express();
-const PORT = process.env.PORT || 3000;
+// const PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
