@@ -7,24 +7,23 @@ if(process.env.JAWSDB_URL) {
 } else {
   //local host
     connection = mysql.createConnection({
-        root: 3000,
-        host: "localhost",
-        user: "root",
-        password: "",
-        database: "db_name",
+      host: "localhost",
+      user: "root",
+      password: "",
+      database:"burgers_db"
     });
 };
 
-var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database:"burgers_db"
-  });
+// var con = mysql.createConnection({
+//     host: "localhost",
+//     user: "root",
+//     password: "",
+//     database:"burgers_db"
+//   });
   
-  con.connect(function(err) {
+  connection.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
   });
 
-  module.exports = con;
+  module.exports = connection;
